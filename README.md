@@ -18,13 +18,13 @@ val testData = arrayOf(
 
 // incorrect results, ~usually 50% misses
 for((inputs, _) in testData) {
-    println(network(inputs))
+    println(network(inputs).contentToString())
 }
 
 network.train(testData, 10000)
 
 // correct results
 for((inputs, _) in testData) {
-    println(network(inputs))
+    println(network(inputs).contentToString())
 }
 ```
